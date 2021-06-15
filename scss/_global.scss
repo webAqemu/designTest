@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $bg;
+  font-family: "GolosUI", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+  color: $text;
+}
+
+.container {
+  max-width: 1270px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 60px;
+  line-height: 1.2;
+  color: black;
+  &__italic {
+    font-size: 70px;
+    line-height: 72px;
+    font-family: "Spectral", sans-serif;
+  }
+}
+
+.btn {
+  width: 290px;
+  padding: 13px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: $light-text;
+  box-shadow: 5px 9px 9px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: all 0.3s;
+  &--blue {
+    color: $blue;
+  }
+  svg {
+    pointer-events: none;
+  }
+  svg path {
+    transition: all 0.3s;
+  }
+  &:hover {
+    background-color: #323232;
+    color: white;
+    box-shadow: none;
+    svg path {
+      fill: white;
+    }
+  }
+  &.pressed {
+    background-color: #323232;
+    color: white;
+    box-shadow: none;
+    svg path {
+      fill: white;
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}

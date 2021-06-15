@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "GolosUI";
+  src: url("../fonts/Golos-UI_Bold.woff2") format("woff2"), url("../fonts/Golos-UI_Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap; }
+
+@font-face {
+  font-family: "GolosUI";
+  src: url("../fonts/Golos-UI_Regular.woff2") format("woff2"), url("../fonts/Golos-UI_Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Aeroport";
+  src: url("../fonts/AeroportMono.woff2") format("woff2"), url("../fonts/AeroportMono.woff") format("woff");
+  font-weight: 400;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Spectral";
+  src: url("../fonts/Spectral-Italic.woff2") format("woff2"), url("../fonts/Spectral-Italic.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: inherit; }
+
+input,
+input::placeholder,
+textarea,
+textarea::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+p {
+  margin: 0; }
+
+button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  font: inherit; }
+
+/*
+@mixin variable {
+  background: linear-gradient(135deg, #5ba4e5 0%, #7384fe 100%);
+} 
+*/
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html,
+body {
+  position: relative;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #fafafa;
+  font-family: "GolosUI", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #3f3f3f; }
+
+.container {
+  max-width: 1270px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.title {
+  font-size: 60px;
+  line-height: 1.2;
+  color: black; }
+  .title__italic {
+    font-size: 70px;
+    line-height: 72px;
+    font-family: "Spectral", sans-serif; }
+
+.btn {
+  width: 290px;
+  padding: 13px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #5c5c5c;
+  box-shadow: 5px 9px 9px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: all 0.3s; }
+  .btn--blue {
+    color: #6582cb; }
+  .btn svg {
+    pointer-events: none; }
+  .btn svg path {
+    transition: all 0.3s; }
+  .btn:hover {
+    background-color: #323232;
+    color: white;
+    box-shadow: none; }
+    .btn:hover svg path {
+      fill: white; }
+  .btn.pressed {
+    background-color: #323232;
+    color: white;
+    box-shadow: none; }
+    .btn.pressed svg path {
+      fill: white; }
+
+.hidden {
+  display: none !important; }
+
+.header {
+  margin-top: 50px; }
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+
+.menu__list {
+  display: flex; }
+
+.menu__item:not(:last-child) {
+  margin-right: 50px; }
+
+.menu__link {
+  transition: color 0.3s; }
+  .menu__link:hover {
+    color: #00ff00; }
+
+.preview {
+  position: relative;
+  margin-top: 140px; }
+  .preview__title {
+    max-width: 715px;
+    width: 100%;
+    margin-bottom: 40px; }
+  .preview__text {
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 75px; }
+    .preview__text p:last-child {
+      max-width: 450px;
+      width: 100%;
+      margin-top: 30px; }
+  .preview__img {
+    position: absolute;
+    right: 0;
+    top: -100px; }
+
+.question {
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .question__num {
+    display: inline-block;
+    font-family: "Spectral", sans-serif;
+    font-size: 60px;
+    color: #bbbbbb;
+    margin-right: 30px; }
+  .question__title {
+    margin-bottom: 35px; }
+  .question__options {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; }
+  .question__next {
+    margin-top: 135px;
+    position: relative; }
+    .question__next svg {
+      margin-left: 16px; }
+  .question[data-q="2"] .question__back {
+    margin-top: 0; }
+  .question__back {
+    margin-top: 250px;
+    display: inline-block; }
+  .question__img {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    opacity: 0;
+    transition: opacity 0.5s; }
+  .question__btn:hover + .question__img {
+    opacity: 1; }
