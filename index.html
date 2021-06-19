@@ -101,12 +101,12 @@
             </h1>
             <ul class="question__options">
               <li class="question__option">
-                <button class="question__btn btn btn--blue option" data-answer="alone">В одиночку</button>
-                <img class="question__img" src="./img/alone.png" />
+                <button class="btn btn--blue option" data-answer="alone">В одиночку</button>
+                <img class="question__img question__img--alone" src="./img/alone.png" />
               </li>
               <li class="question__option">
-                <button class="question__btn btn btn--blue option" data-answer="team">В команде</button>
-                <img class="question__img" src="./img/team.png" />
+                <button class="btn btn--blue option" data-answer="team">В команде</button>
+                <img class="question__img question__img--team" src="./img/team.png" />
               </li>
             </ul>
             <button class="question__back">Вернуться назад</button>
@@ -117,15 +117,128 @@
         <div class="container">
           <div class="question__inner">
             <span class="question__num">4/9</span>
-            <h1 class="question__title title">Больше нравится работа с объемом или плоскостью?</h1>
+            <h1 class="question__title title">
+              Больше нравится работа <br />
+              с объемом или плоскостью?
+            </h1>
             <ul class="question__options">
               <li class="question__option">
                 <button class="question__btn btn btn--blue option" data-answer="2d">Плоскость</button>
-                <img class="question__img" src="./img/2d.png" />
+                <img class="question__img question__img--2d" src="./img/2d.png" />
               </li>
               <li class="question__option">
                 <button class="question__btn btn btn--blue option" data-answer="3d">Объем</button>
-                <img class="question__img" src="./img/3d.png" />
+                <img class="question__img question__img--3d" src="./img/3d.png" />
+              </li>
+            </ul>
+            <button class="question__back">Вернуться назад</button>
+          </div>
+        </div>
+      </section>
+      <section class="question hidden" data-q="5">
+        <div class="container">
+          <div class="question__inner">
+            <span class="question__num">5/9</span>
+            <h1 class="question__title title">
+              Хотелось бы улучшать существующее <br />
+              или придумывать новое?
+            </h1>
+            <ul class="question__options">
+              <li class="question__option">
+                <button class="question__btn btn btn--blue option" data-answer="upgrade">Улучшать</button>
+                <img class="question__img question__img--upgrade" src="./img/upgrade.png" />
+              </li>
+              <li class="question__option">
+                <button class="question__btn btn btn--blue option" data-answer="new">Придумывать</button>
+                <img class="question__img question__img--new" src="./gif/new-gif.gif" />
+              </li>
+            </ul>
+            <button class="question__back">Вернуться назад</button>
+          </div>
+        </div>
+      </section>
+      <section class="question hidden" data-q="6">
+        <div class="container">
+          <div class="question__inner">
+            <span class="question__num">6/9</span>
+            <h1 class="question__title title">
+              Больше нравится что-то <br />
+              масштабное или маленькое?
+            </h1>
+            <ul class="question__options">
+              <li class="question__option">
+                <button class="question__btn btn btn--blue option" data-answer="big">Масштабное</button>
+                <img class="question__img question__img--big" src="./img/big.png" />
+              </li>
+              <li class="question__option">
+                <button class="question__btn btn btn--blue option" data-answer="small">Маленькое</button>
+                <img class="question__img question__img--small" src="./img/small.png" />
+              </li>
+            </ul>
+            <button class="question__back">Вернуться назад</button>
+          </div>
+        </div>
+      </section>
+      <section class="question hidden" data-q="7">
+        <div class="container">
+          <div class="question__inner">
+            <span class="question__num">7/9</span>
+            <h1 class="question__title title">
+              Что выберешь: точность <br />
+              или хаотичность?
+            </h1>
+            <ul class="question__options">
+              <li class="question__option">
+                <button class="question__btn btn btn--blue option" data-answer="chaos">Хаотичность</button>
+                <img class="question__img question__img--chaos" src="./gif/chaos-gif.gif" />
+              </li>
+              <li class="question__option">
+                <button class="question__btn btn btn--blue option" data-answer="accuracy">Точность</button>
+                <img class="question__img question__img--accuracy" src="./img/accuracy.png" />
+              </li>
+            </ul>
+            <button class="question__back">Вернуться назад</button>
+          </div>
+        </div>
+      </section>
+      <section class="question hidden" data-q="8">
+        <div class="container">
+          <div class="question__inner">
+            <span class="question__num">8/9</span>
+            <h1 class="question__title title">
+              Хотелось бы работать <br />
+              в диджитал-среде или реальной?
+            </h1>
+            <ul class="question__options">
+              <li class="question__option">
+                <button class="question__btn btn btn--blue option" data-answer="digital">Диджитал</button>
+                <img class="question__img question__img--digital" src="./gif/digital-gif.gif" width="450px" />
+              </li>
+              <li class="question__option">
+                <button class="question__btn btn btn--blue option" data-answer="real">Реальный мир</button>
+                <img class="question__img question__img--real" src="./img/real.png" />
+              </li>
+            </ul>
+            <button class="question__back">Вернуться назад</button>
+          </div>
+        </div>
+      </section>
+      <section class="question hidden" data-q="9">
+        <div class="container">
+          <div class="question__inner">
+            <span class="question__num">9/9</span>
+            <h1 class="question__title title">
+              Решать конкретные задачи <br />
+              или&nbsp;проявлять творческий порыв?
+            </h1>
+            <ul class="question__options">
+              <li class="question__option">
+                <button class="question__btn btn btn--blue option" data-answer="tasks">Конкретные задачи</button>
+                <img class="question__img question__img--tasks" src="./img/tasks.png" />
+              </li>
+              <li class="question__option">
+                <button class="question__btn btn btn--blue option" data-answer="impulse">Творческий порыв</button>
+                <img class="question__img question__img--impulse" src="./gif/impulse-gif.gif" />
               </li>
             </ul>
             <button class="question__back">Вернуться назад</button>
