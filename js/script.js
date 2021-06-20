@@ -1,5 +1,5 @@
 const graf = ["team", "2d", "new", "small", "chaos", "digital", "tasks"];
-const prom = ["alone", "3d", "upgrade", "big", "accuracy", "real", "tasks"];
+const ind = ["alone", "3d", "upgrade", "big", "accuracy", "real", "tasks"];
 const kost = ["alone", "3d", "new", "big", "chaos", "real", "impulse"];
 const sreda = ["alone", "3d", "upgrade", "big", "accuracy", "real", "tasks"];
 const aks = ["alone", "3d", "new", "small", "chaos", "real", "tasks"];
@@ -11,10 +11,10 @@ const answers = [];
 
 document.querySelector("main").addEventListener("click", function (e) {
   // старт теста
-  if (e.target.classList.contains("start")) {
-    const preview = e.target.closest(".preview");
+  if (e.target.classList.contains("start__btn")) {
+    const start = e.target.closest(".start");
     const firstQuestion = document.querySelector('.question[data-q="1"]');
-    preview.classList.add("hidden");
+    start.classList.add("hidden");
     firstQuestion.classList.remove("hidden");
   }
 
@@ -38,13 +38,17 @@ document.querySelector("main").addEventListener("click", function (e) {
 
   // переход на следующий вопрос
 
-  if (e.target.classList.contains("question__next") || e.target.classList.contains("option")) {
+  if (e.target.classList.contains("question__next")) {
     const question = e.target.closest(".question");
     const questionNum = +question.dataset.q;
-    if (questionNum != 9) {
-      const questionNext = document.querySelector(`.question[data-q="${questionNum + 1}"]`);
+    const choosed = question.querySelectorAll(".pressed");
+    const questionNext = document.querySelector(`.question[data-q="${questionNum + 1}"]`);
+    if (choosed.length > 0 && choosed.length < 3) {
+      e.target.classList.remove("error");
       question.classList.add("hidden");
       questionNext.classList.remove("hidden");
+    } else {
+      e.target.classList.add("error");
     }
   }
 
@@ -58,11 +62,10 @@ document.querySelector("main").addEventListener("click", function (e) {
     if (questionNum == 9) {
       switch (answers.join("")) {
         case graf.join(""):
-          console.log(graf);
-          //window.location.href = "graf.html";
+          window.location.href = "graf.html";
           break;
-        case prom.join(""):
-          console.log("prom");
+        case ind.join(""):
+          console.log("ind");
           break;
         case kost.join(""):
           console.log("kost");
@@ -85,6 +88,10 @@ document.querySelector("main").addEventListener("click", function (e) {
         default:
           console.log("meme");
       }
+    } else {
+      const questionNext = document.querySelector(`.question[data-q="${questionNum + 1}"]`);
+      question.classList.add("hidden");
+      questionNext.classList.remove("hidden");
     }
 
     // так же убираем hover класс у соседнего option
@@ -94,6 +101,6 @@ document.querySelector("main").addEventListener("click", function (e) {
 });
 
 // tasks
-// 1) сделать так чтобы нельзя было перейти на след вопрос если если выбрано более 2-ух направлений
+// 1) сделать так чтобы нельзя было перейти на след вопрос если если выбрано более 2-ух направлений +
 // 2) сделать все страницы с направлениями, а также странциу всех направлений
 // 3) узнать как сделать отправку формы и статистики

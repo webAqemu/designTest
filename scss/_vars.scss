@@ -4,8 +4,10 @@ $light-text: #5c5c5c;
 $bg: #fafafa;
 $grey: #bbbbbb;
 $blue: #6582cb;
-/*
-@mixin variable {
-  background: linear-gradient(135deg, #5ba4e5 0%, #7384fe 100%);
-} 
-*/
+$red: #f300a4;
+
+@mixin r {
+  @media (max-width: 900px) {
+    @content;
+  }
+}

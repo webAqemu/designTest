@@ -27,7 +27,7 @@
   }
 }
 
-.preview {
+.start {
   position: relative;
   margin-top: 140px;
   &__title {
@@ -49,6 +49,7 @@
     position: absolute;
     right: 0;
     top: -100px;
+    z-index: -1;
   }
 }
 
@@ -79,6 +80,15 @@
     position: relative;
     svg {
       margin-left: 16px;
+    }
+    &.error::after {
+      content: "Выберите одно или два направления!";
+      position: absolute;
+      top: -30px;
+      left: 0;
+      right: 0;
+      font-size: 14px;
+      color: $text;
     }
   }
   &[data-q="2"] &__back {
@@ -151,5 +161,340 @@
 
   .option:hover + &__img {
     opacity: 1;
+  }
+}
+
+// направления
+
+.preview {
+  margin: 130px 0 60px;
+  min-height: 360px;
+  height: 100%;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__text {
+    max-width: 660px;
+    width: 100%;
+  }
+
+  &__circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, #ff0808 0%, #ffb199 100%);
+    filter: blur(25px);
+    transform: rotate(-45deg);
+  }
+  &__img {
+    position: absolute;
+    right: 0;
+    top: -70px;
+  }
+}
+
+.promo {
+  margin-bottom: 130px;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    width: 50%;
+  }
+  &__text {
+    position: relative;
+    margin-left: -140px;
+    padding: 135px 45px 90px;
+    background: white;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Spectral", sans-serif;
+    max-width: 775px;
+    width: 100%;
+    height: fit-content;
+    font-size: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: 45px;
+      width: 42px;
+      height: 42px;
+      background-image: url(../img/promo-star-icon.svg);
+    }
+  }
+}
+
+.about {
+  margin-bottom: 200px;
+  &__title {
+    max-width: 820px;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+  &__list {
+    max-width: 510px;
+    width: 100%;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 70px;
+  }
+  &__item:first-child .about__text {
+    max-width: 470px;
+  }
+  &__subtitle {
+    font-size: 35px;
+    line-height: 1.3;
+    font-family: "Spectral", sans-serif;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-size: 22px;
+  }
+  &__circle {
+    position: absolute;
+    top: -210px;
+    left: 50%;
+    width: 1150px;
+    height: 1150px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, #ff0808 0%, #ffb199 100%);
+    filter: blur(25px);
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    &--graf {
+      max-width: 635px;
+      justify-content: flex-end;
+    }
+  }
+  &__img {
+    display: inline-block;
+    img {
+      width: 100%;
+    }
+    &--graf {
+      &-1 {
+        max-width: 635px;
+      }
+      &-2 {
+        max-width: 230px;
+        margin-bottom: auto;
+      }
+      &-3 {
+        max-width: 360px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.future {
+  margin-bottom: 200px;
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  &__img {
+    margin-right: 20px;
+    width: 50%;
+  }
+  &__item {
+    position: relative;
+    font-family: "Spectral", sans-serif;
+    font-size: 35px;
+    padding-left: 25px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: black;
+    }
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.more {
+  margin-bottom: 130px;
+  &__title {
+    margin-bottom: 100px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+  &__item {
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: right top;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 60px 40px;
+    font-family: "Spectral", sans-serif;
+    font-size: 35px;
+    min-height: 280px;
+    &--ind {
+      background-image: url(../img/more-ind.png);
+    }
+    &--eks {
+      background-image: url(../img/more-eks.png);
+    }
+    &--sreda {
+      background-image: url(../img/more-sreda.png);
+      .more__text {
+        max-width: 500px;
+      }
+    }
+    &--kost {
+      background-image: url(../img/more-kost.png);
+    }
+  }
+
+  &__text {
+    max-width: 320px;
+    width: 100%;
+    line-height: 1.25;
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contacts {
+  margin-bottom: 130px;
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__inner {
+    font-size: 22px;
+    display: flex;
+    gap: 40px;
+  }
+
+  &__form {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 2px solid #bbbbbb;
+    margin-top: 50px;
+    outline: none;
+  }
+
+  &__wrapper {
+    position: relative;
+    margin: 40px 0;
+  }
+
+  &__label {
+    position: relative;
+    padding-left: 40px;
+    font-size: 18px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      border: 1px solid black;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 13.5px;
+      background-image: url(../img/contacts-agree-icon.svg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    a {
+      color: $blue;
+    }
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &__checkbox:checked + &__label::after {
+    opacity: 1;
+  }
+}
+
+.social {
+  font-family: "Spectral", sans-serif;
+  font-size: 27px;
+  max-width: 370px;
+  width: 100%;
+  margin: 0 auto;
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__list {
+    display: flex;
+    gap: 40px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  &__link {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

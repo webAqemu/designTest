@@ -5,6 +5,7 @@ body {
   font-size: 18px;
   line-height: 1.7;
   color: $text;
+  overflow-x: hidden;
 }
 
 .container {
@@ -12,6 +13,10 @@ body {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.logo {
+  width: 77px;
 }
 
 .title {
