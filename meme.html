@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Институт Дизайна</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <img src="./img/logo.svg" class="logo" />
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="./all.html" class="menu__link">Все направления</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">На сайт Института Дизайна</a></li>
+              <li class="menu__item"><a href="./index.html" class="menu__link">Начать заново</a></li>
+            </ul>
+          </nav>
+          <button class="header__burger">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="preview preview--meme">
+        <div class="container">
+          <div class="preview__inner">
+            <div class="preview__info">
+              <h2 class="preview__title title">
+                Кажется, твоя душа лежит
+                <span class="title__italic">к&nbsp;мемам</span>
+              </h2>
+              <div class="preview__text">
+                <p>Мы заметили, что твой выбор пал только на варианты с мемами. Мы тоже любим с них поорать, но стараемся не забывать и про учебу :)</p>
+                <p>Если все-таки хочешь определиться с направлением:</p>
+              </div>
+              <a href="./index.html" class="preview__btn btn btn--blue">Пройти тест заново</a>
+            </div>
+            <img class="preview__img preview__img--meme" src="./img/preview-meme.png" />
+          </div>
+        </div>
+      </section>
+      <div class="meme">
+        <div class="container">
+          <div class="meme__line meme__line--1">
+            <img src="./img/meme-1.png" class="meme__img meme__img--1" />
+          </div>
+          <div class="meme__line meme__line--2">
+            <img src="./img/meme-2.png" class="meme__img meme__img--2" />
+          </div>
+          <div class="meme__line meme__line--3">
+            <img src="./img/meme-3.png" class="meme__img meme__img--3" />
+          </div>
+          <div class="meme__line meme__line--4">
+            <img src="./img/meme-4.png" class="meme__img meme__img--4" />
+          </div>
+          <div class="meme__line meme__line--5">
+            <img src="./img/meme-5.png" class="meme__img meme__img--5" />
+          </div>
+          <div class="meme__line meme__line--6">
+            <img src="./img/meme-6.png" class="meme__img meme__img--6" />
+          </div>
+        </div>
+      </div>
+      <section class="contacts">
+        <div class="container">
+          <h2 class="contacts__title title">
+            Отправьте заявку <br />
+            на обучение
+          </h2>
+          <div class="contacts__inner">
+            <form class="contacts__form">
+              <p class="contacts__reminder">И не забывайте подписываться на соц.сети!</p>
+              <input class="contacts__input" type="text" placeholder="ФИО" required />
+              <input class="contacts__input" type="text" placeholder="E-mail" required />
+              <input class="contacts__input" type="tel" placeholder="Номер телефона" required />
+              <div class="contacts__wrapper">
+                <input class="contacts__checkbox" type="checkbox" name="agree" id="agree" />
+                <label class="contacts__label" for="agree"> Даю согласие на <a href="#">обработку персональных данных</a> </label>
+              </div>
+              <button class="contacts__btn btn btn--blue" type="submit">Отправить</button>
+            </form>
+            <div class="social">
+              <p class="social__title">Институт дизайна</p>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link" style="background-image: url(./img/social-inst.svg)"></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link" style="background-image: url(./img/social-facebook--black.svg)"></a>
+                </li>
+              </ul>
+              <p class="social__title">Поделиться с друзьями</p>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link" style="background-image: url(./img/social-facebook.svg)"></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link" style="background-image: url(./img/social-twitter.svg)"></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link" style="background-image: url(./img/social-vk.svg)"></a>
+                </li>
+              </ul>
+              <a href="index.html" class="repeat__link mobileOnly">Пройти еще раз</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

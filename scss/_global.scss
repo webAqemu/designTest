@@ -1,3 +1,13 @@
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+html.active {
+  overflow: hidden;
+}
+
 body {
   background-color: $bg;
   font-family: "GolosUI", sans-serif;
@@ -5,7 +15,21 @@ body {
   font-size: 18px;
   line-height: 1.7;
   color: $text;
-  overflow-x: hidden;
+  &.test {
+    height: 100vh;
+  }
+}
+
+.mobileOnly {
+  display: none !important;
+  @include r {
+    display: block !important;
+  }
+}
+.desktopOnly {
+  @include r {
+    display: none !important;
+  }
 }
 
 .container {
@@ -17,6 +41,11 @@ body {
 
 .logo {
   width: 77px;
+  z-index: 3;
+  &.inactive {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .title {
@@ -28,12 +57,24 @@ body {
     line-height: 72px;
     font-family: "Spectral", sans-serif;
   }
+  @include r {
+    max-width: 410px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.4;
+    &__italic {
+      font-size: 36px;
+      line-height: 1;
+    }
+  }
 }
 
 .btn {
   width: 290px;
   padding: 13px 0 15px;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   background-color: white;
@@ -57,14 +98,28 @@ body {
     svg path {
       fill: white;
     }
+    &::before {
+      color: white;
+    }
   }
   &.pressed {
-    background-color: #323232;
-    color: white;
-    box-shadow: none;
+    background-color: #323232 !important;
+    color: white !important;
+    box-shadow: none !important;
     svg path {
-      fill: white;
+      fill: white !important;
     }
+  }
+  &--inactive {
+    color: rgba(92, 92, 92, 0.5);
+    box-shadow: none;
+    pointer-events: none;
+  }
+
+  @include r {
+    max-width: 366px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
