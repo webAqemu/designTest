@@ -22,10 +22,12 @@ body {
 
 .mobileOnly {
   display: none !important;
+
   @include r {
     display: block !important;
   }
 }
+
 .desktopOnly {
   @include r {
     display: none !important;
@@ -52,11 +54,13 @@ body {
   font-size: 60px;
   line-height: 1.2;
   color: black;
+
   &__italic {
     font-size: 70px;
     line-height: 72px;
     font-family: "Spectral", sans-serif;
   }
+
   @include r {
     max-width: 410px;
     width: 100%;
@@ -64,6 +68,7 @@ body {
     text-align: center;
     font-size: 32px;
     line-height: 1.4;
+
     &__italic {
       font-size: 36px;
       line-height: 1;
@@ -82,34 +87,43 @@ body {
   box-shadow: 5px 9px 9px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   transition: all 0.3s;
+
   &--blue {
     color: $blue;
   }
+
   svg {
     pointer-events: none;
   }
+
   svg path {
     transition: all 0.3s;
   }
+
   &:hover {
     background-color: #323232;
     color: white;
     box-shadow: none;
+
     svg path {
       fill: white;
     }
+
     &::before {
       color: white;
     }
   }
+
   &.pressed {
     background-color: #323232 !important;
     color: white !important;
     box-shadow: none !important;
+
     svg path {
       fill: white !important;
     }
   }
+
   &--inactive {
     color: rgba(92, 92, 92, 0.5);
     box-shadow: none;
