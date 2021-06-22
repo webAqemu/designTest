@@ -79,7 +79,8 @@
             </ul>
             <ul class="about__gallery about__gallery--eks">
               <li class="about__img about__img--eks-1">
-                <img src="./img/about-eks-img.png" />
+                <img class="desktopOnly" src="./img/about-eks-img.png" />
+                <img class="mobileOnly" src="./img/about-eks-img-mobile.png" />
               </li>
             </ul>
             <div class="about__circle about__circle--nacre"></div>
@@ -151,7 +152,7 @@
               <input class="contacts__input" type="text" placeholder="E-mail" required />
               <input class="contacts__input" type="tel" placeholder="Номер телефона" required />
               <div class="contacts__wrapper">
-                <input class="contacts__checkbox" type="checkbox" name="agree" id="agree" />
+                <input class="contacts__checkbox" type="checkbox" name="agree" id="agree" checked/>
                 <label class="contacts__label" for="agree"> Даю согласие на <a href="#">обработку персональных данных</a> </label>
               </div>
               <button class="contacts__btn btn btn--blue" type="submit">Отправить</button>
@@ -164,15 +165,6 @@
                 </li>
                 <li class="social__item">
                   <a href="#" class="social__link" style="background-image: url(./img/social-facebook--black.svg)"></a>
-                </li>
-              </ul>
-              <p class="social__title">Кафедра графического дизайна</p>
-              <ul class="social__list">
-                <li class="social__item">
-                  <a href="#" class="social__link" style="background-image: url(./img/social-behance.svg)"></a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link" style="background-image: url(./img/social-inst.svg)"></a>
                 </li>
               </ul>
               <p class="social__title">Поделиться с друзьями</p>

@@ -1,7 +1,11 @@
 html,
 body {
-  overflow-x: hidden;
   position: relative;
+  scroll-behavior: smooth;
+  @include r {
+    overflow-x: hidden;
+
+  }
 }
 
 html.active {
@@ -15,8 +19,13 @@ body {
   font-size: 18px;
   line-height: 1.7;
   color: $text;
+  overflow-x: hidden;
   &.test {
-    height: 100vh;
+    overflow: hidden;
+    @include r {
+      overflow: visible;
+      overflow-x: hidden;
+    }
   }
 }
 
@@ -44,7 +53,7 @@ body {
   &__italic {
     font-size: 70px;
     line-height: 72px;
-    font-family: "Spectral", sans-serif;
+    font-family: 'Spectral', serif;
   }
 
   @include r {
@@ -120,6 +129,13 @@ body {
     max-width: 366px;
     width: 100%;
     margin: 0 auto;
+  }
+  .mobileOnly {
+    display: none !important;
+
+    @include r {
+      display: block !important;
+    }
   }
 }
 

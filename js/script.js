@@ -1,8 +1,13 @@
 const graf = ["team", "2d", "new", "small", "chaos", "digital", "tasks"];
+const graf2 = ["team", "2d", "upgrade", "small", "chaos", "digital", "tasks"];
 const ind = ["team", "3d", "upgrade", "big", "accuracy", "real", "tasks"];
-const kost = ["alone", "3d", "new", "big", "chaos", "real", "impulse"];
+const ind2 = ["team", "3d", "upgrade", "big", "accuracy", "digital", "tasks"];
+const kost = ["alone", "3d", "new", "small", "chaos", "real", "tasks"];
+const kost2 = ["alone", "2d", "new", "small", "chaos", "real", "tasks"];
+const kost3 = ["alone", "3d", "new", "small", "accuracy", "real", "tasks"];
+const kost4 = ["alone", "2d", "new", "small", "accuracy", "real", "tasks"];
 const sreda = ["alone", "3d", "upgrade", "big", "accuracy", "real", "tasks"];
-const aks = ["alone", "3d", "new", "small", "chaos", "real", "tasks"];
+const sreda2 = ["alone", "3d", "new", "big", "accuracy", "real", "tasks"];
 const arkh = ["team", "3d", "new", "big", "accuracy", "real", "tasks"];
 const eks = ["team", "3d", "new", "big", "accuracy", "digital", "tasks"];
 const prikl = ["alone", "2d", "new", "small", "accuracy", "real", "impulse"];
@@ -33,6 +38,11 @@ document.querySelector("main").addEventListener("click", function (e) {
     } else {
       question.querySelector(".question__next").classList.remove("error");
     }
+  }
+
+  // нажатие варианта  с навыками
+  if (e.target.classList.contains("question__btn--skills")) {
+    e.target.classList.toggle("pressed");
   }
 
   // возвращение на шаг назад
@@ -83,33 +93,55 @@ document.querySelector("main").addEventListener("click", function (e) {
       answers.push(choosed);
       console.log(answers);
       if (questionNum == 9) {
-        switch (answers.join("")) {
-          case graf.join(""):
-            window.location.href = "graf.html";
-            break;
-          case ind.join(""):
-            window.location.href = "ind.html";
-            break;
-          case kost.join(""):
-            window.location.href = "kost.html";
-            break;
-          case sreda.join(""):
-            window.location.href = "sreda.html";
-            break;
-          case aks.join(""):
-            window.location.href = "kost.html";
-            break;
-          case arkh.join(""):
-            window.location.href = "sreda.html";
-            break;
-          case eks.join(""):
-            window.location.href = "eks.html";
-            break;
-          case prikl.join(""):
-            window.location.href = "prik.html";
-            break;
-          default:
-            window.location.href = "meme.html";
+        if (answers[6] == "impulse") {
+          window.location.href = "prik.html";
+        } else {
+          switch (answers.join("")) {
+            case graf.join(""):
+              window.location.href = "graf.html";
+              break;
+            case graf2.join(""):
+              window.location.href = "graf.html";
+              break;
+            case ind.join(""):
+              window.location.href = "ind.html";
+              break;
+            case ind2.join(""):
+              window.location.href = "ind.html";
+              break;
+            case kost.join(""):
+              window.location.href = "kost.html";
+              break;
+            case kost2.join(""):
+              window.location.href = "kost.html";
+              break;
+            case kost3.join(""):
+              window.location.href = "kost.html";
+              break;
+            case kost4.join(""):
+              window.location.href = "kost.html";
+              break;
+            case sreda.join(""):
+              window.location.href = "sreda.html";
+              break;
+            case sreda2.join(""):
+              window.location.href = "sreda.html";
+              break;
+            case aks.join(""):
+              window.location.href = "kost.html";
+              break;
+            case arkh.join(""):
+              window.location.href = "sreda.html";
+              break;
+            case eks.join(""):
+              window.location.href = "eks.html";
+              break;
+            case prikl.join(""):
+              window.location.href = "prik.html";
+              break;
+            default:
+              window.location.href = "meme.html";
+          }
         }
       } else {
         const questionNext = document.querySelector(`.question[data-q="${questionNum + 1}"]`);
@@ -136,33 +168,55 @@ document.querySelector("main").addEventListener("click", function (e) {
     answers.push(choosed);
     console.log(answers);
     if (questionNum == 9) {
-      switch (answers.join("")) {
-        case graf.join(""):
-          window.location.href = "graf.html";
-          break;
-        case ind.join(""):
-          window.location.href = "ind.html";
-          break;
-        case kost.join(""):
-          window.location.href = "kost.html";
-          break;
-        case sreda.join(""):
-          window.location.href = "sreda.html";
-          break;
-        case aks.join(""):
-          window.location.href = "kost.html";
-          break;
-        case arkh.join(""):
-          window.location.href = "sreda.html";
-          break;
-        case eks.join(""):
-          window.location.href = "eks.html";
-          break;
-        case prikl.join(""):
-          window.location.href = "prik.html";
-          break;
-        default:
-          window.location.href = "meme.html";
+      if (answers[6] == "impulse") {
+        window.location.href = "prik.html";
+      } else {
+        switch (answers.join("")) {
+          case graf.join(""):
+            window.location.href = "graf.html";
+            break;
+          case graf2.join(""):
+            window.location.href = "graf.html";
+            break;
+          case ind.join(""):
+            window.location.href = "ind.html";
+            break;
+          case ind2.join(""):
+            window.location.href = "ind.html";
+            break;
+          case kost.join(""):
+            window.location.href = "kost.html";
+            break;
+          case kost2.join(""):
+            window.location.href = "kost.html";
+            break;
+          case kost3.join(""):
+            window.location.href = "kost.html";
+            break;
+          case kost4.join(""):
+            window.location.href = "kost.html";
+            break;
+          case sreda.join(""):
+            window.location.href = "sreda.html";
+            break;
+          case sreda2.join(""):
+            window.location.href = "sreda.html";
+            break;
+          case aks.join(""):
+            window.location.href = "kost.html";
+            break;
+          case arkh.join(""):
+            window.location.href = "sreda.html";
+            break;
+          case eks.join(""):
+            window.location.href = "eks.html";
+            break;
+          case prikl.join(""):
+            window.location.href = "prik.html";
+            break;
+          default:
+            window.location.href = "meme.html";
+        }
       }
     } else {
       const questionNext = document.querySelector(`.question[data-q="${questionNum + 1}"]`);
@@ -210,6 +264,9 @@ if (windowWidth < 900) {
       });
     }
   });
+  if(document.querySelectorAll(".question__back")) {
+    document.querySelectorAll(".question__back").forEach(back => back.innerHTML = "Назад")
+  }
 }
 
 console.log(window.location.href);

@@ -37,7 +37,7 @@
               </h2>
               <div class="preview__text">
                 <p>Теперь мы подробнее расскажем, чем занимается средовой дизайнер, и что отличает его от других направлений.</p>
-                <p>Кстати, в Институте дизайна можно <a href="#">подать заявку</a> и на дизайн архитектурной среды! Кафедра дизайна среды обладает двумя направлениями обучения.</p>
+                <p>Кстати, в Институте дизайна можно <a href="#contacts">подать заявку</a> и на дизайн архитектурной среды! Кафедра дизайна среды обладает двумя направлениями обучения.</p>
               </div>
             </div>
             <span class="preview__circle preview__circle--green"> </span>
@@ -82,7 +82,8 @@
             </ul>
             <ul class="about__gallery about__gallery--sreda">
               <li class="about__img about__img--sreda-1">
-                <img src="./img/about-sreda-img.png" />
+                <img class="desktopOnly" src="./img/about-sreda-img.png" />
+                <img class="mobileOnly" src="./img/about-sreda-img-mobile.png" />
               </li>
             </ul>
             <div class="about__circle about__circle--green"></div>
@@ -141,7 +142,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <h2 class="contacts__title title">
             Отправьте заявку <br />
@@ -154,7 +155,7 @@
               <input class="contacts__input" type="text" placeholder="E-mail" required />
               <input class="contacts__input" type="tel" placeholder="Номер телефона" required />
               <div class="contacts__wrapper">
-                <input class="contacts__checkbox" type="checkbox" name="agree" id="agree" />
+                <input class="contacts__checkbox" type="checkbox" name="agree" id="agree" checked/>
                 <label class="contacts__label" for="agree"> Даю согласие на <a href="#">обработку персональных данных</a> </label>
               </div>
               <button class="contacts__btn btn btn--blue" type="submit">Отправить</button>
@@ -169,11 +170,8 @@
                   <a href="#" class="social__link" style="background-image: url(./img/social-facebook--black.svg)"></a>
                 </li>
               </ul>
-              <p class="social__title">Кафедра графического дизайна</p>
+              <p class="social__title">Кафедра средового дизайна</p>
               <ul class="social__list">
-                <li class="social__item">
-                  <a href="#" class="social__link" style="background-image: url(./img/social-behance.svg)"></a>
-                </li>
                 <li class="social__item">
                   <a href="#" class="social__link" style="background-image: url(./img/social-inst.svg)"></a>
                 </li>
