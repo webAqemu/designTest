@@ -115,6 +115,10 @@ body {
   .logo.inactive {
     opacity: 0;
     pointer-events: none; }
+  .logo--menu {
+    left: 15px;
+    top: 40px;
+    position: absolute; }
 
 .title {
   font-size: 60px;

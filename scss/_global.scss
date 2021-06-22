@@ -43,6 +43,11 @@ body {
     opacity: 0;
     pointer-events: none;
   }
+  &--menu {
+    left: 15px;
+    top: 40px;
+    position: absolute;
+  }
 }
 
 .title {
