@@ -357,7 +357,7 @@
 
       &::before {
         content: "Следующий шаг";
-        font-size: 14px;
+        font-size: 18px;
         color: $blue;
         position: absolute;
         left: 50%;
@@ -1112,6 +1112,7 @@
 
   &__list {
     max-width: 450px;
+    margin: 0 auto;
   }
 
   &__item {
@@ -1445,7 +1446,7 @@
 
   &__btn {
     @include r {
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 }

@@ -4,7 +4,6 @@ body {
   scroll-behavior: smooth;
   @include r {
     overflow-x: hidden;
-
   }
 }
 
@@ -24,7 +23,6 @@ body {
     overflow: hidden;
     @include r {
       overflow: visible;
-      overflow-x: hidden;
     }
   }
 }

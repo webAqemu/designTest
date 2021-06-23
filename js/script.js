@@ -93,7 +93,7 @@ document.querySelector("main").addEventListener("click", function (e) {
       answers.push(choosed);
       console.log(answers);
       if (questionNum == 9) {
-        if (answers[6] == "impulse") {
+        if (answers[5] == "real" && answers[6] == "impulse") {
           window.location.href = "prik.html";
         } else {
           switch (answers.join("")) {
@@ -126,9 +126,6 @@ document.querySelector("main").addEventListener("click", function (e) {
               break;
             case sreda2.join(""):
               window.location.href = "sreda.html";
-              break;
-            case aks.join(""):
-              window.location.href = "kost.html";
               break;
             case arkh.join(""):
               window.location.href = "sreda.html";
@@ -168,7 +165,7 @@ document.querySelector("main").addEventListener("click", function (e) {
     answers.push(choosed);
     console.log(answers);
     if (questionNum == 9) {
-      if (answers[6] == "impulse") {
+      if (answers[5] == "real" && answers[6] == "impulse") {
         window.location.href = "prik.html";
       } else {
         switch (answers.join("")) {
@@ -201,9 +198,6 @@ document.querySelector("main").addEventListener("click", function (e) {
             break;
           case sreda2.join(""):
             window.location.href = "sreda.html";
-            break;
-          case aks.join(""):
-            window.location.href = "kost.html";
             break;
           case arkh.join(""):
             window.location.href = "sreda.html";
@@ -264,8 +258,8 @@ if (windowWidth < 900) {
       });
     }
   });
-  if(document.querySelectorAll(".question__back")) {
-    document.querySelectorAll(".question__back").forEach(back => back.innerHTML = "Назад")
+  if (document.querySelectorAll(".question__back")) {
+    document.querySelectorAll(".question__back").forEach((back) => (back.innerHTML = "Назад"));
   }
 }
 

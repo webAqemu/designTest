@@ -50,7 +50,8 @@ h3 {
 input {
   color: inherit;
   background-color: transparent;
-  border: none; }
+  border: none;
+  border-radius: 0; }
   input[type="checkbox"] {
     margin: 0; }
 
@@ -100,8 +101,7 @@ body {
     overflow: hidden; }
     @media (max-width: 900px) {
       body.test {
-        overflow: visible;
-        overflow-x: hidden; } }
+        overflow: visible; } }
 
 .container {
   max-width: 1270px;
@@ -445,7 +445,7 @@ body {
         margin: 40px 0 30px; }
         .question__next::before {
           content: "Следующий шаг";
-          font-size: 14px;
+          font-size: 18px;
           color: #6582cb;
           position: absolute;
           left: 50%;
@@ -983,7 +983,8 @@ body {
         width: 360px;
         margin: 0 auto 160px; } }
   .future__list {
-    max-width: 450px; }
+    max-width: 450px;
+    margin: 0 auto; }
   .future__item {
     position: relative;
     font-family: 'Spectral', serif;
@@ -1219,7 +1220,7 @@ body {
     opacity: 1; }
   @media (max-width: 900px) {
     .contacts__btn {
-      font-size: 14px; } }
+      font-size: 18px; } }
 
 .social {
   font-family: 'Spectral', serif;

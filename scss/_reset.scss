@@ -37,6 +37,7 @@ input {
   color: inherit;
   background-color: transparent;
   border: none;
+  border-radius: 0;
   &[type="checkbox"] {
     margin: 0;
   }
