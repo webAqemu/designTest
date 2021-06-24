@@ -101,7 +101,8 @@ body {
     overflow: hidden; }
     @media (max-width: 900px) {
       body.test {
-        overflow: visible; } }
+        overflow: visible;
+        overflow-x: hidden; } }
 
 .container {
   max-width: 1270px;
@@ -127,7 +128,7 @@ body {
   .title__italic {
     font-size: 70px;
     line-height: 72px;
-    font-family: 'Spectral', serif; }
+    font-family: "Spectral", serif; }
   @media (max-width: 900px) {
     .title {
       max-width: 410px;
